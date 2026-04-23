@@ -89,7 +89,7 @@ jobs:
             rm -rf demo-app
 
             echo "Cloning repo..."
-            GIT_ASKPASS=true git clone https://github.com/rajatdevops1/demo-app.git
+            GIT_ASKPASS=true git clone https://github.com/dhananjaykendre-repo-p99/demo-app-devops.git
 
             cd demo-app
 
