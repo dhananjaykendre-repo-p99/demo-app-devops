@@ -96,10 +96,9 @@ jobs:
             echo "Stopping old container..."
             sudo docker rm -f nginx-container || true
 
-            echo "Building new image..."
-            sudo docker build -t nginx-devops-demo .
+            sudo docker system prune -af
+            sudo docker build --no-cache -t nginx-devops-demo .
 
-            echo "Starting new container..."
             sudo docker run -d -p 80:80 --name nginx-container nginx-devops-demo
 
             sudo docker ps -a
