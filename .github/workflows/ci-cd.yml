@@ -82,7 +82,8 @@ jobs:
             sudo yum update -y
             sudo yum install -y git docker
             
-            
+            sudo systemctl start docker
+            sudo systemctl enable docker
             cd /home/ec2-user
 
             rm -rf demo-app
